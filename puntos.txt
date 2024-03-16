@@ -1,0 +1,19 @@
+Requerimientos
+1. Crear las clases representadas en el diagrama implementando la herencia indicada.
+(2 Puntos) 
+*Creadas de acuerdo al diagrama entregado
+
+2. Crear las instancias de las clases utilizando los datos del formulario.
+(2 Puntos)
+
+3. Realizar una consulta asíncrona utilizando una función async/await para obtener las
+imágenes correspondientes a los animales. (1 Punto)
+
+*Utilizada al solicitar la info al JSON
+
+4. Realizar por lo menos una función autoejecutable IIFE. (1 Punto)
+
+5. Dividir el código en módulos (2 Puntos)
+
+6. Utilizar la manipulación del DOM para mostrar en la tabla los animales registrados con
+el formulario. (2 Puntos)
