@@ -15,6 +15,7 @@ $(document).ready(function () {
     const nombreAnimal = $("#animal").val();
     const edadEstimada = $("#edad").val();
     const comentarios = $("#comentarios").val();
+    let img = "";
 
     // Crear una instancia de la clase correspondiente
     let nuevaInstancia;
@@ -23,7 +24,7 @@ $(document).ready(function () {
         nuevaInstancia = new Leon(
           nombreAnimal,
           edadEstimada,
-          "",
+          (img = "../imgs/Leon.png"),
           comentarios,
           ""
         );
@@ -32,7 +33,7 @@ $(document).ready(function () {
         nuevaInstancia = new Lobo(
           nombreAnimal,
           edadEstimada,
-          "",
+          (img = "../imgs/Lobo.jpg"),
           comentarios,
           ""
         );
@@ -41,7 +42,7 @@ $(document).ready(function () {
         nuevaInstancia = new Oso(
           nombreAnimal,
           edadEstimada,
-          "",
+          (img = "../imgs/Oso.jpg"),
           comentarios,
           ""
         );
@@ -50,16 +51,16 @@ $(document).ready(function () {
         nuevaInstancia = new Serpiente(
           nombreAnimal,
           edadEstimada,
-          "",
+          (img = "../imgs/Serpiente.jpg"),
           comentarios,
           ""
         );
         break;
-      case "Águila":
+      case "Aguila":
         nuevaInstancia = new Aguila(
           nombreAnimal,
           edadEstimada,
-          "",
+          (img = "../imgs/Aguila.png"),
           comentarios,
           ""
         );
@@ -70,11 +71,11 @@ $(document).ready(function () {
         return;
     }
 
-    // Agregar la instancia al contenedor de animales
+    // Agregar la informacion de la instancia al contenedor de animales
     const animalHTML = `
-      <div class="animal-info style="color: white;">
+      <div class="animal-info" style="color: white;">
         <h4>${nombreAnimal}</h4>
-        <img src="${nuevaInstancia.img}" alt="${nombreAnimal}">
+        <img src="${img}" alt="${nombreAnimal}" width="300px">
         <p>Nombre: ${nombreAnimal}</p>
         <p>Edad estimada: ${edadEstimada}</p>
         <p>Comentarios: ${comentarios}</p>
